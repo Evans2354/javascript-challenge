@@ -60,6 +60,59 @@ function applyFilter() {
   }
 else {loadData()};
 };
+// function advancedfilter(){
+
+//   d3.event.preventDefault();
+//   var inputValue =d3.select("#Date").property("value");
+//   var cityinputValue = d3.select("#city").property("value");
+//   var state =d3.select("#state").property("value");
+//   var countryinputValue = d3.select("#country").property("value");
+//   var shapeinputValue = d3.select("#shape").property("value");
+//   var finalfilter;
+
+// if (inputValue !=="") {  
+//   var filteredData = tableData.filter(ufo => (ufo.datetime === inputValue));
+//     finalfilter =filteredData;
+  
+//   }
+//   else if ( cityinputValue !==""){
+//     console.log("in city");
+//   var filter2 = finalfilter.filter(ufo => ufo.city === cityinputValue);
+//     finalfilter = filter2;
+//   }
+//   else if ( state !==""){
+//     console.log("in state")
+//     var filter3 = finalfilter.filter(ufo => (ufo.state ==state)); 
+  
+//       finalfilter = filter3;
+//   }
+//   else if ( countryinputValue !==""){
+//     console.log("in country");
+//     var filter4 = finalfilter.filter(ufo =>  (ufo.country == countryinputValue)); 
+  
+//       finalfilter = filter4;
+//   }
+//   else if (shapeinputValue !==""){
+//     console.log("in shape")
+//     var filter5 = finalfilter.filter(ufo => (ufo.shape ==shapeinputValue)) 
+  
+//     finalfilter =filter5;
+//   }
+//   // clear table before applying filter
+//   var cleartable = d3.select("#table-data");
+//   cleartable.html("");
+
+//   //apply filter values
+//   finalfilter.forEach((ufo) => {
+//     var row = tbody.append("tr");
+//     Object.entries(ufo).forEach(([key, value]) => {
+//       var cell = row.append("td");
+//       cell.text(value);
+//     });
+//   });
+
+// }
+
 
 var button = d3.select("#filter-btn");
 button.on("click", applyRangeFilter);
